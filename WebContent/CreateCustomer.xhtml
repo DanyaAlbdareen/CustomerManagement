@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>Create New Customer</title>
+</h:head>
+<h:body>
+	<ui:composition template="/Layout/CommonLayout.xhtml">
+		<ui:define name="header">
+
+
+		</ui:define>
+		<ui:define name="contant">
+			<h:form id="create">
+
+				<h:panelGrid columns="1">
+
+					<h:outputText value="Customer_Name" id="yourName" />
+					<h:inputText id="CustomerName" value="#{user.cons.customer_name}"
+						required="true" requiredMessage="Please , Enter Your Name">
+					</h:inputText>
+					<h:message for="CustomerName" style="color:red" />
+
+					<h:outputText value="Address" id="address" />
+					<h:inputText id="add" value="#{user.cons.address}" required="true"
+						requiredMessage="Please , Enter Your Address!">
+					</h:inputText>
+
+					<h:message for="add" style="color:red" />
+
+					<h:outputText value="Tax Number" />
+					<h:inputText id="tax" value="#{user.cons.tax_number}"
+						required="true" requiredMessage="Please , Enter Your Tax Number!">
+					</h:inputText>
+					<h:message for="tax" style="color:red" />
+
+					<h:outputText value="Active" />
+					<h:selectBooleanCheckbox value="#{user.cons.active}">
+					</h:selectBooleanCheckbox>
+					
+					<div class="btn btn-large ">
+						<h:commandButton styleClass="btn btn-primary btn-lg btn-block"
+							value="SIGN UP" type="submit" id="register"
+							action="#{user.add}" onclick="myFunction()" />
+
+					</div>
+				</h:panelGrid>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

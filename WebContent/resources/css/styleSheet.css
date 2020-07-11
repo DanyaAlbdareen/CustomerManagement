@@ -1,0 +1,85 @@
+
+.name {
+	background: #F00;
+	color: #FFF;
+	margin-bottom: 10px;
+	padding: 10px;
+	border: 1px;
+}
+
+/*Start Upper Bar*/
+.upper-bar {
+	background-color: #4e2231;
+	color: #FFF;
+	padding: 10px;
+	margin-right: auto;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+	width: 10%;
+	padding: 10px;
+}
+
+.search {
+	margin-left: auto;
+	margin-right: auto;
+	width: 10%;
+	padding: 10px;
+}
+
+.footer {
+	text-align: center;
+}
+
+/*End Upper Bar*/
+
+/*Start Navebar */
+.colorBackNavbarLine {
+	background-color: #451f2c;
+	font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic,
+		sans-serif;
+}
+
+.navbar-brand span:first-child {
+	color: #e7ccdf;
+	font-weight:bold;
+}
+
+.navbar-brand span:last-child {
+	color: #842969;
+}
+
+.navcolor {
+	color: #e7ccdf;
+}
+.navcolorArt{
+	
+		color: #842969;
+		
+	
+}
+.navbar-brand > span {
+	font-size: 30px;
+}
+
+.navbar-nav .nav-link {
+	font-weight:bold;
+	font-size:16px;
+	text-transform: uppercase;
+	margin-left: 20px;
+}
+
+/*End Navebar */
+
+/*Start slider*/
+.slider
+{
+	
+background-color: #DDD;
+height: 100vh;	
+	
+	
+}
+/*End slider*/

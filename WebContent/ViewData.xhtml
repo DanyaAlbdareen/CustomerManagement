@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>View Data</title>
+	
+	<h:outputStylesheet library="css" name="bootstrap.css" />
+	<h:outputStylesheet library="css" name="bootstrap.min.css" />
+	<link href="resources/css/styleSheet.css" rel="styleSheet"
+		type="text/css" />
+</h:head>
+<h:body>
+			<h:form>
+				<!-- Start our navbar -->
+				<div class="navbar navbar-expand-lg colorBackNavbarLine">
+
+					<h:commandLink styleClass="navbar-brand">
+						<span>Customer</span>
+						<span>Management</span>
+					</h:commandLink>
+					<div class="navbar-collapse" id="main-nav">
+						<ul class="navbar-nav ml-auto">
+							<li class="nav-item"><h:commandLink
+									styleClass="nav-link navcolor" action="homePage.js" id="home"
+									value="Home" /></li>
+							<li class="nav-item"><h:commandLink
+									styleClass="nav-link navcolor" action="About.xhtml"
+									value="About" /></li>
+
+
+							<li class="nav-item"><h:commandLink id="contact"
+									styleClass="nav-link navcolor" value="Contact" /></li>
+
+						</ul>
+					</div>
+
+				</div>
+			</h:form>
+		<ui:define name="content">
+
+			<h:form>
+				<h:dataTable value="#{user.customers}" var="db" border="1">
+					<h:column>
+						<f:facet name="header">ID</f:facet></h:column>
+					<h:column>
+						<f:facet name="header">Customer Name</f:facet>
+					#{db.customer_name}
+					</h:column>
+					<h:column>
+						<f:facet name="header">Address</f:facet>
+						#{db.address}
+					</h:column>
+					<h:column>
+						<f:facet name="header">Tax Number</f:facet>
+					#{db.tax_number}
+					</h:column>
+					<h:column>
+						<f:facet name="header">Country</f:facet>
+							#{db.country_name}
+					</h:column>
+					<h:column>
+						<f:facet name="header">City</f:facet>
+							#{db.city_name}
+					</h:column>
+				</h:dataTable>
+
+				<h:dataTable value="#{user.cons2}" var="db">
+					<h:column>
+						<f:facet name="header">ID</f:facet>#{db.id}</h:column>
+					<h:column>
+						<f:facet name="header">Customer Name</f:facet>
+					#{db.customer_name}
+					</h:column>
+					<h:column>
+						<f:facet name="header">Address</f:facet>
+						#{db.address}
+					</h:column>
+					<h:column>
+						<f:facet name="header">Tax Number</f:facet>
+					#{db.tax_number}
+					</h:column>
+				
+					<h:column>
+						<f:facet name="header">Country</f:facet>
+							#{db.country_name}
+					</h:column>
+					<h:column>
+						<f:facet name="header">City</f:facet>
+							#{db.city_name}
+					</h:column>
+				</h:dataTable>
+
+<h:commandButton value="Update Data" action="#{user.update}"></h:commandButton>
+<h:commandButton value="Delete Data" action="#{user.delete}"></h:commandButton>
+
+
+			</h:form>
+</ui:define>
+
+</h:body>
+</html>

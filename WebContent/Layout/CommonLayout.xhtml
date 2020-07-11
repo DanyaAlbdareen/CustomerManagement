@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:fb="http://www.facebook.com/2008/fbml"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+
+<h:head>
+	<title>Layouts</title>
+	<!--  <h:outputStylesheet library="css" name="styleSheet.css" />
+	<h:outputStylesheet library="css" name="bootstrap.css" />-->
+
+	<h:outputStylesheet library="css" name="bootstrap.css" />
+	<h:outputStylesheet library="css" name="bootstrap.min.css" />
+	<link href="resources/css/styleSheet.css" rel="styleSheet"
+		type="text/css" />
+</h:head>
+<h:body>
+
+	<script src="resources/js/jquery-3.4.1.min.js" />
+	<script src="resources/js/popper.min.js" />
+	<script src="resources/js/bootstrap.min.js" />
+	<h:form>
+		<div id="Page">
+
+			<div id="header">
+
+				<div class="upper-bar">
+					<div class="contanier">
+						<div class="row">
+							<div class="col-sm">Phone :+962 786254686 , Email
+								:Danya@gmail.com</div>
+							<div class="col-sm">
+								<h:commandLink styleClass="nav-link navcolor"
+									action="homePage.js" id="home" value="Home" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<ui:insert name="header">
+				<ui:include src="/Layout/CommonHeader.xhtml"></ui:include>
+			</ui:insert>
+
+		</div>
+		<div id="nave" class="nav">
+			<ui:insert name="nave">
+				<ui:include src="/Layout/CommonNav.xhtml"></ui:include>
+			</ui:insert>
+
+		</div>
+
+		<div id="contant" class="contanier center">
+
+			<ui:insert name="contant">
+				<ui:include src="/Layout/CommonContant.xhtml"></ui:include>
+			</ui:insert>
+
+		</div>
+
+		<div id="footer" class="container footer">
+			<ui:insert name="footer">
+				<ui:include src="/Layout/CommonFooter.xhtml"></ui:include>
+			</ui:insert>
+		</div>
+
+	</h:form>
+</h:body>
+</html>
+
